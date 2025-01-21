@@ -1,6 +1,7 @@
 import logo from "./logo.svg";
 import "./App.css";
 import Card from "./components/Card";
+import Form from "./components/Form";
 import saeid from "./saeid.jpg";
 import sadeq from "./sadeq.jpg";
 import soheil from "./soheil.jpg";
@@ -30,22 +31,7 @@ function App() {
           <Card name={car.name} price={car.price} src={car.src} />
         ))}
       </div>
-      {/* <table className="table">
-        <thead>
-          <tr>
-            <th scope="col">#</th>
-            <th scope="col">First</th>
-          </tr>
-        </thead>
-        <tbody>
-          {names.map((name, index) => (
-            <tr>
-              <th scope="row">{index + 1}</th>
-              <td>{name}</td>
-            </tr>
-          ))}
-        </tbody>
-      </table> */}
+      <Form />
     </div>
   );
 }

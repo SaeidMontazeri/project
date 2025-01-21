@@ -11,13 +11,13 @@ function Card(props) {
     setPrice(price - 1);
   }
   return (
-    <div class="card col-4" style={{ width: "27rem" }}>
-      <img src={props.src} class="card-img-top" alt={props.name} height={300} />
-      <div class="card-body">
-        <h5 class="card-title" style={{ textAlign: "center", width: "100%" }}>
+    <div className="card col-4" style={{ width: "27rem" }}>
+      <img src={props.src} className="card-img-top" alt={props.name} height={300} />
+      <div className="card-body">
+        <h5 className="card-title" style={{ textAlign: "center", width: "100%" }}>
           {props.name}
         </h5>
-        <p class="card-text" style={{ textAlign: "center", width: "100%" }}>
+        <p className="card-text" style={{ textAlign: "center", width: "100%" }}>
           {price},000 $
         </p>
         <div className="row">
