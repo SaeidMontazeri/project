@@ -3,9 +3,10 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import React from "react";
 import { useState } from "react";
 
-function Form() {
+function Form({ darkMode, setDarkMode }) {
   const [userName, setUserName] = useState("");
   const [passWord, setPassword] = useState("");
+
   function changeUserName(event) {
     setUserName(event.target.value);
   }
@@ -53,11 +54,12 @@ function Form() {
       </form>
       <button
         className="btn btn-primary"
+        style={{ backgroundColor: darkMode ? "white" : "gray", color: "blue" }}
         onClick={() => {
-          console.log(userName, passWord);
+          setDarkMode(!darkMode);
         }}
       >
-        Submit
+        Dark Mode
       </button>
     </div>
   );

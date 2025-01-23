@@ -2,11 +2,16 @@ import logo from "./logo.svg";
 import "./App.css";
 import Card from "./components/Card";
 import Form from "./components/Form";
+import Gay from "./components/Gay";
 import saeid from "./saeid.jpg";
 import sadeq from "./sadeq.jpg";
 import soheil from "./soheil.jpg";
+import { useState } from "react";
 
 function App() {
+  const [darkMode, setDarkMode] = useState(false);
+  const [width, setWidth] = useState(27);
+  const [height, setHeight] = useState(300);
   const cars = [
     {
       name: "Audi",
@@ -25,13 +30,19 @@ function App() {
     },
   ];
   return (
-    <div className="container">
+    <div
+      style={{
+        backgroundColor: darkMode ? "Black" : "white",
+        height: "100vh",
+      }}
+    >
       <div className="row">
         {cars.map((car) => (
           <Card name={car.name} price={car.price} src={car.src} />
         ))}
       </div>
-      <Form />
+      <Form darkMode={darkMode} setDarkMode={setDarkMode} />
+      <Gay/>
     </div>
   );
 }
