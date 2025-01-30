@@ -3,9 +3,10 @@ import "./App.css";
 import Card from "./components/Card";
 import Form from "./components/Form";
 import Gay from "./components/Gay";
-import saeid from "./saeid.jpg";
-import sadeq from "./sadeq.jpg";
-import soheil from "./soheil.jpg";
+import CarList from "./components/CarList";
+// import saeid from "./saeid.jpg";
+// import sadeq from "./sadeq.jpg";
+// import soheil from "./soheil.jpg";
 import { useState } from "react";
 
 function App() {
@@ -43,6 +44,7 @@ function App() {
       </div>
       <Form darkMode={darkMode} setDarkMode={setDarkMode} />
       <Gay/>
+      <CarList cars={cars}/>
     </div>
   );
 }
